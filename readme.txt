@@ -7,7 +7,7 @@ git commit -m "Description" //Commit modified files to the master with comment, 
 (git config --global user.name "Your name") // Set user name, for the first use
 
 git status // Examine the status of the repository
-git diff <file> // Exanmine change to the file
+git diff <file> // Examine change to the file
 
 git log [--pretty=oneline] // Examine commit logfile [only display one line for each]
 git reflog // Display every command
