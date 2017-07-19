@@ -1,15 +1,21 @@
 # Git & Github
 * Install git on Ubuntu
-	`sudo apt-get install git`
+`sudo apt-get install git`
 * Create a directory, Initiate a new repository 
 `git init`
-git add <file> // Add file to the stage, every time you modify the file and want to commit it to the repository
-git commit -m "Description" //Commit modified files to the master with comment, every time you modify the file and want to commit it to the repository
-(git config --global user.email "you@email.com") // Set user email, for the first use
-(git config --global user.name "Your name") // Set user name, for the first use
+* Add file to the stage, every time you modify the file and want to commit it to the repository
+`git add <file>`
+* Commit modified files to the master with comment, every time you modify the file and want to commit it to the repository
+`git commit -m "Description"`
+* Set user email, for the first use
+`git config --global user.email "you@email.com"`
+* Set user name, for the first use
+`git config --global user.name "Your name"`
 
-git status // Examine the status of the repository
-git diff <file> // Examine change to the file
+* Examine the status of the repository
+`git status`
+* Examine change to the file
+`git diff <file>`
 
 git log [--pretty=oneline] // Examine commit logfile [only display one line for each]
 git reflog // Display every command
