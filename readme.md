@@ -12,42 +12,70 @@
 * Set user name, for the first use
 `git config --global user.name "Your name"`
 
-
+=====================
 * Examine the status of the repository
 `git status`
 * Examine change to the file
 `git diff <file>`
 
+=====================
+* Examine commit logfile [only display one line for each]
+`git log [--pretty=oneline]`
+* Display every command
+`git reflog`
+* Move master pointer the version "commit id" HEAD points to master
+`git reset --hard HEAD^(commit id)`
 
-git log [--pretty=oneline] // Examine commit logfile [only display one line for each]
-git reflog // Display every command
-git reset --hard HEAD^(commit id) // Move master pointer the version "commit id" HEAD points to master
+=====================
+* Go back to the version not added or committed (unstage)
+`git checkout -- <file>`
+* Go back from stage to unstage
+`git reset HEAD <file>`
 
-git checkout -- <file> // Go back to the version not added or committed (unstage)
-git reset HEAD <file> // Go back from stage to unstage
+=====================
+* Delete file from repository
+`git rm <file>`
+* Mistakenly delete file from workspace, recover from repository
+`git checkout -- <file>`
 
-git rm <file> // Delete file from repository
-git checkout -- <file> // Mistakenly delete file from workspace, recover from repository
+=====================
+* Setup relation between local repository and remote repository
+`git remote add origin git@github.com:jwtty/repo-name.git`
+* Push all the files in local repository to remote repository
+`git push -u origin master`
+* Push file to remote repository every time committing local files
+`git push origin master`
+* Clone a local repository from remote repository
+git clone <path>
 
-git remote add origin git@github.com:jwtty/repo-name.git // Setup relation between local repository and remote repository
-git push -u origin master // Push all the files in local repository to remote repository
-git push origin master // Push file to remote repository every time commiting local files
+=====================
+* List all the branches
+`git branch`
+* Create a branch
+`git branch <name>`
+* Change to branch <name>
+`git checkout <name>`
+* Combination of the above two commands
+`git checkout -b <name>`
+* Merge branch <name> to the current branch
+`git merge <name>`
+* Delete a branch
+`git branch -d <name>`
+* Do not use Fast Forward to merge 
+`git merge --no-ff -m "Comment" <name>`
 
-git clone <path> // Clone a local repository from remote repository
-
-git branch // List all the branches
-git branch <name> // Create a branch
-git checkout <name> // Change to branch <name>
-git checkout -b <name> // Combination of the above two commands
-git merge <name> // Merge branch <name> to the current branch
-git branch -d <name> // Delete a branch
-git merge --no-ff -m "Comment" <name> // Do not use Fast Forward to merge 
-
-git push origin branch-name // push local modification to removal repository
-git pull // update local repository
-git branch --set-upstream branch-name origin/branch-name //"no tracking information"
-git remote -v // View remote info
-git checkout -b branch-name origin/branch-name // Create local branch corresponding to remote branch
+=====================
+* push local modification to removal repository
+`git push origin branch-name`
+* update local repository
+`git pull`
+* "no tracking information"
+`git branch --set-upstream branch-name origin/branch-name`
+* View remote info
+`git remote -v`
+* Create local branch corresponding to remote branch
+`git checkout -b branch-name origin/branch-name`
 
 
-Reference: https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000
+**Reference:**
+ https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000
