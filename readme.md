@@ -12,11 +12,13 @@
 * Set user name, for the first use
 `git config --global user.name "Your name"`
 
+=================
 * Examine the status of the repository
 `git status`
 * Examine change to the file
 `git diff <file>`
 
+=================
 git log [--pretty=oneline] // Examine commit logfile [only display one line for each]
 git reflog // Display every command
 git reset --hard HEAD^(commit id) // Move master pointer the version "commit id" HEAD points to master
