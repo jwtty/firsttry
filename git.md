@@ -46,7 +46,7 @@
 * Push file to remote repository every time committing local files
 `git push origin master`
 * Clone a local repository from remote repository
-git clone <path>
+`git clone <path>`
 
 =====================
 * List all the branches
